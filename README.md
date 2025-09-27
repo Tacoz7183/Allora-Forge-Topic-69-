@@ -71,7 +71,8 @@ If you already have a wallet, you can skip this step and just run the worker.
 ---
 
 ### 5. 🍏 MacOS Users – Install libomp
-LightGBM requires libomp on MacOS. Before running your worker, install and configure it:
+LightGBM requires libomp on MacOS. Before running your worker, install and configure it
+(Use one by one ):
 
 ```bash
 # Install libomp
