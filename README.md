@@ -1,18 +1,18 @@
-# ⚡ Worker 69 – Allora ML Worker
+# ⚡ Allora Forge Worker
 
-This worker runs a single Allora ML model for log-return prediction on **Topic 69**.  
+This worker runs a single Allora ML model for log-return prediction on a chosen topic.  
 It trains a LightGBM model, evaluates performance, and continuously submits live predictions to the Allora network.
 
 ---
 
 ## 📋 Requirements
 
-- Python 3.12+  
-- Windows 11 / WSL2 or Linux (recommended for GPU)  
-- Allora Forge Builder Kit  
-- LightGBM (CPU works fine; GPU optional if compiled)  
+- Python **3.12+**
+- Windows 11 / WSL2 or Linux (recommended for GPU users)
+- Allora Forge Builder Kit
+- LightGBM (CPU build works fine, GPU optional)
 
-Dependencies are already in `requirements.txt`:
+All dependencies are listed in `requirements.txt`:
 
 ```
 git+https://github.com/allora-network/allora-forge-builder-kit.git
@@ -28,71 +28,87 @@ cloudpickle
 
 ---
 
-## 📦 Clone and Run
+## ⚙️ Installation (from scratch)
 
-```bash
-git clone https://github.com/Tacoz7183/allora-forge.git
-cd allora-forge
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/Tacoz7183/allora-forge.git
+   cd allora-forge
+   ```
 
-# Create and activate virtual environment
-python -m venv venv
-source venv/bin/activate   # Activate venv
+2. **Set up virtual environment**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate   # Linux / WSL
+   ```
 
-# Install dependencies
-pip install -r requirements.txt
+3. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-# Run the worker
-python worker69.py
-```
+4. **Verify Python & pip**
+   ```bash
+   python --version
+   pip --version
+   ```
 
----
-
-## 🚀 Running Worker 69
-
-```bash
-python worker69.py
-```
-
-When you run it, the script will:
-
-1. Ask for your Allora API key  
-2. Download the Historical Data  
-3. Train the model  
-4. Then prompt you to enter your wallet mnemonic (24 words)  
-5. Begin submitting predictions to the Allora network  
+5. **Install `allorad` (Skip this step if you already have a wallet)**
+   ```bash
+   curl -sSL https://raw.githubusercontent.com/allora-network/allora-chain/dev/install.sh | bash -s -- v0.12.1
+   ```
+   Check installation:
+   ```bash
+   allorad version
+   ```
 
 ---
 
 ## 🔐 Create and Manage Your Allora Wallet with `allorad`
 
-If you **don’t already have an Allora wallet**, install `allorad` and create one:
+If you **don’t have an Allora wallet yet**, run these commands:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/allora-network/allora-chain/dev/install.sh | bash -s -- v0.12.1
-
-# Create a new wallet
-allorad keys add your_wallet_name
-
-# List wallets
-allorad keys list
-
-# Show wallet address
-allorad keys show your_wallet_name -a
+allorad keys add your_wallet_name        # Create a new wallet
+allorad keys list                        # Show all wallets stored locally
+allorad keys show your_wallet_name -a    # Display your wallet address
 ```
 
-If you **already have a wallet**, you don’t need to run these commands.  
-Just start the worker (`python worker69.py`) and it will ask you for your mnemonic automatically.
+👉 This will generate a **24-word mnemonic phrase**.  
+⚠️ Save it securely — it’s the only way to recover your wallet.
 
 ---
 
-## 📝 Summary
-
-The script will:
-
-- Ask for your Allora API key  
-- Download historical data  
-- Train the model  
-- Prompt you for your wallet mnemonic (24 words)  
-- Submit predictions live to the Allora network for Topic-69 🚀  
+If you **already have a wallet**:  
+➡️ You can skip creating a new one.  
+When you run the worker, it will prompt you for your **24-word mnemonic** automatically.
 
 ---
+
+## 📦 Clone and Run
+
+```bash
+git clone https://github.com/Tacoz7183/allora-forge.git
+cd allora-forge
+python -m venv venv
+source venv/bin/activate   # Linux / WSL
+pip install -r requirements.txt
+python worker.py
+```
+
+---
+
+## 🚀 Running Worker
+
+```bash
+python worker.py
+```
+
+When you run it, the script will:
+
+1. Ask for your **Allora API key**  
+2. Download the **historical data**  
+3. Train the model with LightGBM (CPU by default)  
+4. Save the trained `.pkl` model file  
+5. Prompt you to enter your **wallet mnemonic (24 words)**  
+6. Begin **submitting predictions** to the Allora network 🚀
