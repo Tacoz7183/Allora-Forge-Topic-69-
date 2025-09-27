@@ -1,7 +1,9 @@
-# ⚡ Worker – Allora ML Worker
+# ⚡Allora ML Worker
 
-This worker runs a single Allora ML model for log-return prediction on a chosen topic.  
+This worker runs a single Allora ML model for testing.
 It trains a LightGBM model, evaluates performance, and continuously submits live predictions to the Allora network.
+
+NOTE: FORGE-WHITELIST Depends on the performance of your model. 
 
 ---
 
