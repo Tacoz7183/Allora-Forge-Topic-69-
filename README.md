@@ -53,17 +53,17 @@ pip install -r requirements.txt
 curl -sSL https://raw.githubusercontent.com/allora-network/allora-chain/dev/install.sh | bash -s -- v0.12.1
 ```
 
-#### 6a. Create your wallet
+#### a. Create your wallet
 ```bash
 allorad keys add your_wallet_name
 ```
 
-#### 6b. List all wallets
+#### b. List all wallets
 ```bash
 allorad keys list
 ```
 
-#### 6c. Show your wallet address
+#### c. Show your wallet address
 ```bash
 allorad keys show your_wallet_name -a
 ```
