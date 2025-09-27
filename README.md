@@ -13,20 +13,6 @@ It trains a **LightGBM model**, evaluates performance, and continuously submits 
 - LightGBM (GPU build optional, CPU works fine)  
 - Allora CLI (`allorad`) for wallet setup  
 
-Dependencies are listed in `requirements.txt`:
-
-```
-git+https://github.com/allora-network/allora-forge-builder-kit.git
-allora_sdk>=1.0.5
-lightgbm
-scikit-learn
-pandas
-numpy
-matplotlib
-dill
-cloudpickle
-```
-
 ---
 
 ## 🛠 Install Dependencies
