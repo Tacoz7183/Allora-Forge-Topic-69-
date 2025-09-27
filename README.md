@@ -93,6 +93,6 @@ The script will:
 - Download historical data  
 - Train the model  
 - Prompt you for your wallet mnemonic (24 words)  
-- Submit predictions live to the Allora network 🚀  
+- Submit predictions live to the Allora network for Topic-69 🚀  
 
 ---
