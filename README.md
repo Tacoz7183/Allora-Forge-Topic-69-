@@ -28,36 +28,13 @@ matplotlib
 dill
 cloudpickle
 
-👉 Install everything into a virtual environment:
+## ⚙️ Environment Setup
 
-python -m venv venv
-venv\Scripts\activate   # On Windows
-# OR
-source venv/bin/activate   # On Linux / WSL
-
-pip install -r requirements.txt
-⚙️ Environment
-
-Export your Allora API key (from your wallet):
-
-set ALLORA_API_KEY=your_api_key_here   # On Windows (cmd)
+Set your Allora API key (replace with your real key):
+set ALLORA_API_KEY=your_api_key_here      # On Windows (cmd)
 export ALLORA_API_KEY=your_api_key_here   # On Linux / WSL
 
-▶️ Run Worker 69
-
-Start the worker:
+##  🚀 Running Topic 69
 
 python worker69.py
 
-
-The script will:
-
-Load historical candles for the selected asset.
-
-Train a LightGBM regressor (force_col_wise=True for efficiency).
-
-Evaluate validation + test data.
-
-Retrain on all data.
-
-Start submitting live predictions to topic 69.
