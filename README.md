@@ -62,10 +62,16 @@ pip install -r requirements.txt
 # Install allorad
 curl -sSL https://raw.githubusercontent.com/allora-network/allora-chain/dev/install.sh | bash -s -- v0.12.1
 
+```
 # Create and manage your Allora wallet
+```bash
 allorad keys add your_wallet_name      # Create your wallet
+
+```
+```bash
 allorad keys list                      # List all wallets
 allorad keys show your_wallet_name -a  # Show your wallet address
+
 ```
 
 ⚠️ Save your **24-word mnemonic** and wallet address securely.  
@@ -124,11 +130,6 @@ When you run it, the script will:
 
 ---
 
-## 🤝 Contributing
-
-PRs are welcome! Fork the repo, add your improvements, and submit a PR.
-
----
 
 ## 📜 License
 
