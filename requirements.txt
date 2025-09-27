@@ -1,0 +1,9 @@
+git+https://github.com/allora-network/allora-forge-builder-kit.git
+allora_sdk>=1.0.5
+lightgbm
+scikit-learn
+pandas
+numpy
+matplotlib
+dill
+cloudpickle
