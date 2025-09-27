@@ -1,23 +1,29 @@
-# Allora-Forge
-The Allora Model Forge is the hub for monetization of machine learning models. Compete alongside top talent in AI, create models with real impact, and earn rewards &amp; recognition within the Allora ecosystem and beyond.
-
 # ⚡ Worker 69 – Allora ML Worker
 
-This worker runs a **single Allora ML model** for log-return prediction on topic **69**.  
-It trains a LightGBM model, evaluates performance, and continuously submits live predictions to the Allora network.
+This worker runs a single **Allora ML model** for log-return prediction on **Topic 69**.  
+It trains a **LightGBM model**, evaluates performance, and continuously submits live predictions to the Allora network.
+
+---
+
+## 📂 Clone Repository
+
+```bash
+git clone https://github.com/Tacoz7183/Allora-Forge-Topic-69-.git
+cd Allora-Forge-Topic-69-
+```
 
 ---
 
 ## 📋 Requirements
 
 - Python **3.12+**
-- Windows 11 / WSL2 or Linux (recommended for GPU)
-- [Allora Forge Builder Kit](https://github.com/allora-network/allora-forge-builder-kit)  
-- LightGBM (GPU build optional, CPU works fine)  
+- **Windows 11 / WSL2** or **Linux** (recommended for GPU)
+- Allora Forge Builder Kit
+- LightGBM (GPU build optional, CPU works fine)
 
-Dependencies are already in `requirements.txt`:
+Dependencies are in `requirements.txt`:
 
-```txt
+```
 git+https://github.com/allora-network/allora-forge-builder-kit.git
 allora_sdk>=1.0.5
 lightgbm
@@ -27,14 +33,71 @@ numpy
 matplotlib
 dill
 cloudpickle
+```
+
+---
 
 ## ⚙️ Environment Setup
 
-Set your Allora API key (replace with your real key):
-set ALLORA_API_KEY=your_api_key_here      # On Windows (cmd)
-export ALLORA_API_KEY=your_api_key_here   # On Linux / WSL
+### Linux / WSL
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+export ALLORA_API_KEY=your_api_key_here
+```
 
-##  🚀 Running Topic 69
+### Windows (cmd)
+```bat
+python -m venv venv
+venv\Scripts\activate
+pip install --upgrade pip
+pip install -r requirements.txt
+set ALLORA_API_KEY=your_api_key_here
+```
 
+### Windows (PowerShell)
+```powershell
+python -m venv venv
+venv\Scripts\Activate.ps1
+pip install --upgrade pip
+pip install -r requirements.txt
+$env:ALLORA_API_KEY="your_api_key_here"
+```
+
+---
+
+## 🚀 Running Worker 69
+
+```bash
 python worker69.py
+```
 
+---
+
+## ▶️ Run in Background
+
+Using `screen` (Linux/WSL):
+```bash
+screen -S worker69
+python worker69.py
+# Detach with CTRL+A then D
+```
+
+Using `nohup`:
+```bash
+nohup python worker69.py > worker69.log 2>&1 &
+```
+
+---
+
+## 🛠️ Troubleshooting
+
+- **API Key Missing** → Ensure `ALLORA_API_KEY` is set correctly.  
+- **No GPU Detected** → LightGBM will fall back to CPU automatically.  
+- **Dependency Errors** → Run `pip install -r requirements.txt --force-reinstall`.  
+
+---
+
+✅ Your Worker is now ready to train, evaluate, and submit predictions for **Topic 69**.
