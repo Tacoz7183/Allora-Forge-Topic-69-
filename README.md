@@ -88,6 +88,6 @@ The script will:
 3. Train the model  
 4. Save the `.pkl` model file  
 5. Prompt you to enter your wallet mnemonic (24 words)  
-6. Begin submitting predictions to the Allora network  
+6. Begin submitting predictions to the Allora network 🚀 
 
 ---
