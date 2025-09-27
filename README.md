@@ -14,7 +14,7 @@ It trains a LightGBM model, evaluates performance, and continuously submits live
 
 ---
 
-## 🛠 Install Dependencies from Scratch
+## 🛠 Install Dependencies
 
 ### 1. System Packages
 ```bash
