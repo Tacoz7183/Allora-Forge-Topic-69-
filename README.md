@@ -1,4 +1,4 @@
-# ⚡Allora ML Worker
+# ⚡Allora Forge Whitelist 
 
 This worker runs a single Allora ML model for testing.
 It trains a LightGBM model, evaluates performance, and continuously submits live predictions to the Allora network.
